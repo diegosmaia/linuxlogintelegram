@@ -8,6 +8,7 @@
 CURL="/usr/bin/curl"
 
 USUARIO=$(whoami)
+SERVIDOR=$(hostname)
 
 # O ID DO SEU USUARIO NO TELEGRAM
 USER='150000000'
@@ -21,7 +22,7 @@ BOT_TOKEN='161080402:AAGah3HIxM9jUr0NX1WmEKX3cJCv9PyWD58'
 ############################################
 # Envio Mensagem de Texto do Alerta
 ############################################
-${CURL} -k -s -c ${COOKIE} -b ${COOKIE} -s -X GET "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${USER}&text=O usuario ${USUARIO} realizou login no servidor $HOSTNAME  Data:  $(date '+%d/%m/%Y-%H:%M:%S')  SSH: $SSH_CONNECTION"  > /dev/null
+${CURL} -k -s -c ${COOKIE} -b ${COOKIE} -s -X GET "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${USER}&text=O usuario ${USUARIO} realizou login no servidor $SERVIDOR  Data:  $(date '+%d/%m/%Y-%H:%M:%S')  SSH: $SSH_CONNECTION"  > /dev/null
 
 exit 0
 
