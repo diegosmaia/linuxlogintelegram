@@ -8,3 +8,6 @@ Executar os comandos abaixo para adicionar o script nos arquivos de login e logo
 echo sh /usr/bin/telegram-logoff.sh >> /etc/bash.bash_logout  
 echo sh /usr/bin/telegram-login.sh >> /etc/profile
 
+Como fazer o Bot e pegar o seu USERID do Telegram
+
+https://github.com/diegosmaia/zabbix-telegram/blob/master/Zabbix-Telegram-com-graficos.pdf
